@@ -1,11 +1,9 @@
 # coding:utf8
 from logging import DEBUG
-from logging.config import dictConfig
-from flask import Blueprint, Flask
+from flask import Flask
 
 import settings
 from views import blueprint as view
-from views import index as view_index
 
 # dictConfig({
 #     'version': 1,  # ?
