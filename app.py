@@ -6,7 +6,7 @@ from views import blueprint as view
 
 app = Flask(__name__)
 
-app.logger.setLevel(DEBUG)
+# app.logger.setLevel(DEBUG)
 
 app.register_blueprint(view, url_prefix='/')
 
