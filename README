@@ -1,0 +1,11 @@
+<環境構築>
+1.Amazon EC2のUbuntu Server 18.04でサーバーを立ち上げる
+2.git clone https://github.com/AkayamaNao/ModeMaker
+3.cd ModeMaker
+4.pip install -r requirements.txt
+
+<Webサーバーを立ち上げる>
+sudo python app.py
+
+<テストを実行>
+pytest
