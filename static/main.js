@@ -42,24 +42,45 @@ $(function () {
     });
 });
 
+// $('#preview').on("click", function (event) {
+//     var clickX = event.pageX;
+//     var clickY = event.pageY;
+//
+//     // 要素の位置を取得
+//     var clientRect = this.getBoundingClientRect();
+//     var positionX = clientRect.left + window.pageXOffset;
+//     var positionY = clientRect.top + window.pageYOffset;
+//
+//     // 要素内におけるクリック位置を計算
+//     var x = clickX - positionX;
+//     var y = clickY - positionY;
+//
+//     console.log(x, y);
+//
+//     document.getElementById('x').value = x;
+//     document.getElementById('y').value = y;
+//
+//     document.imgform.submit();
+// });
 
-$('#preview').on("click", function (event) {
-    var clickX = event.pageX;
-    var clickY = event.pageY;
+$('#preview').on("mouseover", function (event1) {
+    $('.loupe img').on("mouseup", function (event) {
+        var clickX = event.pageX;
+        var clickY = event.pageY;
 
-    // 要素の位置を取得
-    var clientRect = this.getBoundingClientRect();
-    var positionX = clientRect.left + window.pageXOffset;
-    var positionY = clientRect.top + window.pageYOffset;
+        // 要素の位置を取得
+        var positionX = $('#preview').offset().left + window.pageXOffset;
+        var positionY = $('#preview').offset().top + window.pageYOffset;
 
-    // 要素内におけるクリック位置を計算
-    var x = clickX - positionX;
-    var y = clickY - positionY;
+        // 要素内におけるクリック位置を計算
+        var x = clickX - positionX;
+        var y = clickY - positionY;
 
-    console.log(x, y);
+        console.log(x, y);
 
-    document.getElementById('x').value = x;
-    document.getElementById('y').value = y;
+        document.getElementById('x').value = x;
+        document.getElementById('y').value = y;
 
-    document.imgform.submit();
+        document.imgform.submit();
+    });
 });
